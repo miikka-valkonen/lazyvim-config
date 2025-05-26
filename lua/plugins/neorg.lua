@@ -19,11 +19,12 @@ return {
               default_workspace = "notes",
             },
           },
-          ["core.keybinds"] = {
-            config = {
-              default_keybinds = false,
-            },
-          },
+          ["core.esupports.hop"] = {},
+          -- ["core.keybinds"] = {
+          -- config = {
+          -- default_keybinds = false,
+          -- },
+          -- },
         },
       })
 
