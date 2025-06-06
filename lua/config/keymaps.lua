@@ -3,4 +3,4 @@
 -- Add any additional keymaps here
 vim.keymap.set("n", "<leader>N", function()
   vim.cmd([[Neorg workspace notes]])
-end)
+end, { desc = "Neorg notes" })
