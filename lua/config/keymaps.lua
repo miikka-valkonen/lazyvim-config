@@ -4,5 +4,8 @@
 vim.keymap.set("n", "<leader>N", function()
   vim.cmd([[Neorg workspace notes]])
 end, { desc = "Neorg notes" })
+
 vim.keymap.set("n", "<TAB>", "<cmd>bn!<CR>", {})
 vim.keymap.set("n", "<S-TAB>", "<cmd>bp!<CR>", {})
+
+vim.keymap.set("t", "<ESC>", "<C-\\><C-N>", { desc = "terminal escape terminal mode" })
