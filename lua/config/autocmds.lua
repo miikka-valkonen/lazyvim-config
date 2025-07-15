@@ -14,3 +14,8 @@
 --     vim.keymap.set("n", "<CR>", "Plug>(neorg.esupports.hop.hop-link)", { buffer = true })
 --   end,
 -- })
+
+-- Not an autocmd, but whatever. Install mason packages not included in LazyVim/LazyExtras.
+vim.api.nvim_create_user_command("MasonInstallAll", function()
+  vim.cmd("MasonInstall csharp-language-server csharpier")
+end, {})

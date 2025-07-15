@@ -65,7 +65,6 @@ return {
         }
 
         local command = '"' .. commands[action]() .. '"'
-        -- vim.cmd("!tmux new-window -c " .. vim.fn.getcwd() .. " -n easydotnet " .. command)
         vim.cmd("!tmux new-window -S -c " .. vim.fn.getcwd() .. " -n easydotnet")
         vim.cmd("!tmux send-keys -t easydotnet " .. command .. " C-m")
       end,
