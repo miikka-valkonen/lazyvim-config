@@ -15,7 +15,9 @@
 --   end,
 -- })
 
+vim.cmd([[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]])
+
 -- Not an autocmd, but whatever. Install mason packages not included in LazyVim/LazyExtras.
 vim.api.nvim_create_user_command("MasonInstallAll", function()
-  vim.cmd("MasonInstall csharp-language-server csharpier")
+  vim.cmd("MasonInstall csharp-language-server csharpier azure-pipelines-language-server")
 end, {})
