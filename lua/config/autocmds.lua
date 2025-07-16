@@ -15,7 +15,8 @@
 --   end,
 -- })
 
-vim.cmd([[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]])
+-- Could not get bicep lsp to work... even with this and lsp config with proper cmd to mason package
+-- vim.cmd([[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]])
 
 -- Not an autocmd, but whatever. Install mason packages not included in LazyVim/LazyExtras.
 vim.api.nvim_create_user_command("MasonInstallAll", function()
