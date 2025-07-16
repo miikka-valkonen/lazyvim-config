@@ -19,7 +19,9 @@ vim.keymap.set("t", "<C-h>", "<C-\\><C-N><C-w>h")
 vim.keymap.set("t", "<C-j>", "<C-\\><C-N><C-w>j")
 vim.keymap.set("t", "<C-k>", "<C-\\><C-N><C-w>k")
 vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l")
-vim.keymap.set("t", "<ESC>", "<C-\\><C-N>") -- Exit terminal mode
+-- Exit terminal mode
+vim.keymap.set("t", "<ESC>", "<C-\\><C-N>")
+vim.keymap.set("t", "jk", "<C-\\><C-N>")
 
 -- Quickly exit from insert mode
 vim.keymap.set("i", "jk", "<ESC>")
