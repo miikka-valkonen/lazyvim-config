@@ -2,14 +2,6 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
-vim.keymap.set("n", "<leader>N", function()
-  vim.cmd([[Neorg workspace notes]])
-end, { desc = "Neorg notes" })
-
-vim.keymap.set("n", "<leader>cW", function()
-  vim.cmd("%s/\r//g")
-end, { desc = "Replace windows line endings" })
-
 vim.keymap.set("n", "<TAB>", "<cmd>bn!<CR>", {}) -- Switch to next buffer
 vim.keymap.set("n", "<S-TAB>", "<cmd>bp!<CR>", {}) -- Switch to previous buffer
 
@@ -30,6 +22,10 @@ vim.keymap.set("i", "jk", "<ESC>")
 vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 
+vim.keymap.set("n", "<leader>cW", function()
+  vim.cmd("%s/\r//g")
+end, { desc = "Replace windows line endings" })
+
 -- Run menu
 vim.keymap.set("n", "<leader>r", "", { desc = "run" })
 vim.keymap.set(
@@ -38,3 +34,15 @@ vim.keymap.set(
   "<Cmd>!tmux new-window -S -c " .. vim.fn.getcwd() .. '/src/AzureFunctions -n func "func start"<CR>',
   { desc = "run function app" }
 )
+
+-- Plugins
+vim.keymap.set("n", "<leader>N", function()
+  vim.cmd([[Neorg workspace notes]])
+end, { desc = "Neorg notes" })
+
+vim.keymap.set("", "s", function()
+  vim.cmd([[HopWord]])
+end)
+vim.keymap.set("", "S", function()
+  vim.cmd([[HopChar1CurrentLine]])
+end)
