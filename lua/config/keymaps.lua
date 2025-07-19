@@ -14,6 +14,7 @@ vim.keymap.set("t", "<C-l>", "<C-\\><C-N><C-w>l")
 -- Exit terminal mode
 vim.keymap.set("t", "<ESC>", "<C-\\><C-N>")
 vim.keymap.set("t", "jk", "<C-\\><C-N>")
+vim.keymap.set("n", "<leader>T", "<Cmd>!tmux new-window -c " .. vim.fn.getcwd() .. "<CR>", { desc = "New Tmux window" })
 
 -- Quickly exit from insert mode
 vim.keymap.set("i", "jk", "<ESC>")

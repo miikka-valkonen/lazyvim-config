@@ -4,6 +4,7 @@ return {
   {
     "smoka7/hop.nvim",
     version = "*",
+    cmd = { "HopWord", "HopChar1CurrentLine" },
     opts = {
       keys = "tsraneiodhplfugjvmwybk",
     },
