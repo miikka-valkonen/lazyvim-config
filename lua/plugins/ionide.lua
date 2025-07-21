@@ -1,7 +1,7 @@
 return {
   {
     "ionide/Ionide-vim",
-    ft = { "fs", "fsi", "fsx" },
+    ft = { "fsharp" },
     config = function()
       vim.g["fsharp#lsp_codelens"] = 0
       require("ionide").setup({})
