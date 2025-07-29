@@ -64,9 +64,16 @@ return {
           end,
         }
 
-        local command = '"' .. commands[action]() .. '"'
-        vim.cmd("!tmux new-window -S -c " .. vim.fn.getcwd() .. " -n easydotnet")
-        vim.cmd("!tmux send-keys -t easydotnet " .. command .. " C-m")
+        -- Check if running within tmux
+        if vim.env.TMUX then
+          local command = '"' .. commands[action]() .. '"'
+          vim.cmd("!tmux new-window -S -c " .. vim.fn.getcwd() .. " -n easydotnet")
+          vim.cmd("!tmux send-keys -t easydotnet " .. command .. " C-m")
+        else
+          local command = commands[action]() .. "\r"
+          vim.cmd("vsplit")
+          vim.cmd("term " .. command)
+        end
       end,
       auto_bootstrap_namespace = {
         --block_scoped, file_scoped
